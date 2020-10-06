@@ -8,7 +8,20 @@ class User extends XFCP_User {
      * @return String[]
      */
     public function getPermissions() {
-        return ["this", "is", "a", "test"];
+
+        $permissions = [];
+
+        foreach ($this->getPermissionSet()->getGlobalPerms() as $group => $group_values) {
+            foreach($group_values as $permission => $value) {
+                if ($value == true) {
+                    $permissions[] = $group . "." . $permission;
+                } elseif ($value) {
+                    $permissions[] = $group . "." . $permission . '.' . $value;
+                }
+            }
+        }
+
+        return $permissions;
     }
 
     protected function setupApiResultData(
