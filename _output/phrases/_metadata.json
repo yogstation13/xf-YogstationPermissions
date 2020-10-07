@@ -1,4 +1,10 @@
 {
+    "api_scope.linking.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "6ed04bbcd7e099f844d8653965c82d1f"
+    },
     "permission.action_access.txt": {
         "global_cache": false,
         "version_id": 20201006,
