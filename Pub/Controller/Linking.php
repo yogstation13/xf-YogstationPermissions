@@ -13,9 +13,11 @@ class Linking extends AbstractController {
 
     public function actionLink(ParameterBag $params) {
         $visitor = \XF::visitor();
+        
+        $linking_key = $this->filter('key', 'str');
 
         $linking_key = \XF::finder('YogstationPermissions:LinkingKey')
-            ->where('linking_key', $params->key)
+            ->where('linking_key', $linking_key)
             ->fetchOne();
 
         if(!$linking_key) {
@@ -24,10 +26,10 @@ class Linking extends AbstractController {
 
         $this->service('YogstationPermissions:Linking\Linking', $visitor->user_id, $linking_key)->link();
 
-        return $this->redirect($this->buildLink('linking/success'));
+        return $this->redirect($this->buildLink('linking/success', null, ["account_type" => $linking_key->account_type]));
     }
 
     public function actionSuccess() {
-        return $this->view('YogstationPermissions:Linking\Success', 'yg_linking_success');
+        return $this->view('YogstationPermissions:Linking\Success', 'yg_linking_success', ['account_type' => $this->filter('account_type', 'str')]);
     }
 }

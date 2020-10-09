@@ -1,0 +1,10 @@
+<xf:title>Account linked successfully</xf:title>
+
+<div class="blockMessage">
+	Your {$account_type|raw} account has been linked successfully.
+	<xf:if is="$account_type == 'byond'">
+		If you have a forums rank your ingame ranks should refresh next time you login.
+	<xf:elseif is="$account_type == 'discord'" />
+		If you have a forums rank your ingame ranks should refresh soon.
+	</xf:if>
+</div>

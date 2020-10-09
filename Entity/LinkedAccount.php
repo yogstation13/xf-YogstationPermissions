@@ -11,7 +11,7 @@ class LinkedAccount extends Entity
 	{
         $structure->table = 'yg_linked_account';
 		$structure->shortName = 'YG:LinkedAccount';
-        $structure->primaryKey = 'user_id';
+        $structure->primaryKey = ['user_id', 'account_type'];
         $structure->columns = [
             'user_id' => ['type' => self::UINT],
             'account_type' => ['type' => self::STR, 'maxLength' => 50],
@@ -27,5 +27,12 @@ class LinkedAccount extends Entity
         ];
 
         return $structure;
+    }
+
+    protected function setupApiResultData(
+		\XF\Api\Result\EntityResult $result, $verbosity = self::VERBOSITY_NORMAL, array $options = [])
+    {
+        $result->account_type = $this->account_type;
+        $result->account_id = $this->account_id;
     }
 }

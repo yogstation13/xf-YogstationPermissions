@@ -26,17 +26,19 @@ class Linking extends \XF\Service\AbstractService
 
         $linked_account->save();
 
-        return $key;
+        return $linked_account;
     }
 
     public function removeOldAccounts() {
         $finder = \XF::finder('YogstationPermissions:LinkedAccount');
 
-        $linked_account = $finder->where('account_id', $params->account_type)
-                       ->where('account_type', $params->account_type)
-                       ->fetchOne();
+        $linked_account = $finder->where('account_type', $this->linking_key->account_type)
+                       ->whereOr(
+                           ['account_id', $this->linking_key->account_type],
+                           ['user_id', $this->user_id]
+                        )->fetchOne();
 
-        if($user) {
+        if($linked_account) {
             $linked_account->delete();
         }
     }

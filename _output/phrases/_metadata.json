@@ -184,5 +184,11 @@
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "df1945eeae99df4ac8e4216678326ebc"
+    },
+    "yg_key_not_exist.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "c8e39ae7d9b2186c9986aecf294ec900"
     }
 }

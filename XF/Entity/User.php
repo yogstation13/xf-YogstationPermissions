@@ -11,11 +11,16 @@ class User extends XFCP_User {
 
         $permissions = [];
 
-        foreach ($this->getPermissionSet()->getGlobalPerms() as $group => $group_values) {
-            foreach($group_values as $permission => $value) {
-                if ($value == true) {
+        foreach ($this->getPermissionSet()->getGlobalPerms() as $group => $group_values)
+        {
+            foreach($group_values as $permission => $value)
+            {
+                if ($value == true)
+                {
                     $permissions[] = $group . "." . $permission;
-                } elseif ($value) {
+                }
+                elseif ($value)
+                {
                     $permissions[] = $group . "." . $permission . '.' . $value;
                 }
             }
@@ -25,11 +30,11 @@ class User extends XFCP_User {
     }
 
     protected function setupApiResultData(
-		\XF\Api\Result\EntityResult $result, $verbosity = self::VERBOSITY_NORMAL, array $options = []
-	) {
+		\XF\Api\Result\EntityResult $result, $verbosity = self::VERBOSITY_NORMAL, array $options = [])
+    {
         parent::setupApiResultData($result, $verbosity, $options);
 
         $result->permissions = $this->getPermissions();
+        $result->linked_accounts = $this->LinkedAccounts;
     }
-
 }
