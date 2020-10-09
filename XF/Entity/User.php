@@ -35,6 +35,14 @@ class User extends XFCP_User {
         parent::setupApiResultData($result, $verbosity, $options);
 
         $result->permissions = $this->getPermissions();
-        $result->linked_accounts = $this->LinkedAccounts;
+
+        $linked_accounts = [];
+
+        foreach ($this->LinkedAccounts as $account)
+        {
+            $linked_accounts[$account->account_type] = $account->account_id;
+        }
+
+        $result->linked_account = $linked_accounts;
     }
 }

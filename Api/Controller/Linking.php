@@ -40,7 +40,7 @@ class Linking extends AbstractController
         
         $finder = \XF::finder('YogstationPermissions:LinkedAccount');
 
-        $linked_account = $finder->where('account_id', $params->account_type)
+        $linked_account = $finder->where('account_id', $params->account_id)
                        ->where('account_type', $params->account_type)
                        ->with('User')->fetchOne();
 

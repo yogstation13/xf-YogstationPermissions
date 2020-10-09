@@ -24,7 +24,7 @@ class Setup extends AbstractSetup
 			$table->addColumn('user_id', 'int');
 			$table->addColumn('account_type', 'varchar', 64);
 			$table->addColumn('account_id', 'varchar', 255);
-			$table->addPrimaryKey('user_id');
+			$table->addPrimaryKey(['user_id', 'account_type']);
 		});
 
 		$this->schemaManager()->createTable('yg_linking_key', function(\XF\Db\Schema\Create $table)
@@ -35,5 +35,12 @@ class Setup extends AbstractSetup
 			$table->addColumn('expires', 'int');
 			$table->addPrimaryKey('linking_key');
 		});
-    }
+	}
+
+	public function uninstallStep1()
+	{
+		$this->schemaManager()->dropTable('yg_linked_account');
+		$this->schemaManager()->dropTable('yg_linking_key');
+	}
+
 }
