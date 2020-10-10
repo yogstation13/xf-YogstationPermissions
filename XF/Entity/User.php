@@ -43,6 +43,6 @@ class User extends XFCP_User {
             $linked_accounts[$account->account_type] = $account->account_id;
         }
 
-        $result->linked_account = $linked_accounts;
+        $result->linked_accounts = count((array) $linked_accounts) == 0 ? null : $linked_accounts;
     }
 }

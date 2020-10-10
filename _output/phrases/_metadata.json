@@ -17,29 +17,29 @@
         "version_string": "20.20.10 6",
         "hash": "c1bb913a603ccdc4381541e7d95fb690"
     },
-    "permission.bans_add.txt": {
+    "permission.ban_add.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "a8e4bc87259cbb9ad973c3e5dab0b5df"
     },
-    "permission.bans_edit.txt": {
+    "permission.ban_edit.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "d461294f59057762cfdcfbd24cf01a8f"
-    },
-    "permission.bans_remove.txt": {
-        "global_cache": false,
-        "version_id": 20201006,
-        "version_string": "20.20.10 6",
-        "hash": "04b3a75f7607530ce49413e7ddda0f3a"
     },
     "permission.book_delete.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "04d2d050eca5f0b4bd1259b48c75c61a"
+    },
+    "permission.book_deleted.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "fe90df45a77100aed4b93deb1fa20e77"
     },
     "permission.ckey_access.txt": {
         "global_cache": false,
@@ -136,12 +136,6 @@
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "b76e28bccf109485314c358777032055"
-    },
-    "permission.library_deleted.txt": {
-        "global_cache": false,
-        "version_id": 20201006,
-        "version_string": "20.20.10 6",
-        "hash": "fe90df45a77100aed4b93deb1fa20e77"
     },
     "permission.loa_add.txt": {
         "global_cache": false,

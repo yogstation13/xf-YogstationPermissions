@@ -5,16 +5,16 @@
     "activity-access.json": {
         "hash": "2fd3cc70831e77605905bf67e8c05c13"
     },
-    "bans-add.json": {
+    "ban-add.json": {
         "hash": "3d73fd2836eecca662da6fe236b9c34c"
     },
-    "bans-edit.json": {
-        "hash": "3d73fd2836eecca662da6fe236b9c34c"
-    },
-    "bans-remove.json": {
+    "ban-edit.json": {
         "hash": "3d73fd2836eecca662da6fe236b9c34c"
     },
     "book-delete.json": {
+        "hash": "546514a03e16a54431408fd47945e16b"
+    },
+    "book-deleted.json": {
         "hash": "546514a03e16a54431408fd47945e16b"
     },
     "ckey-access.json": {
@@ -64,9 +64,6 @@
     },
     "ingame-varedit.json": {
         "hash": "c730a0e26f775b0c01dec850f7fb113c"
-    },
-    "library-deleted.json": {
-        "hash": "546514a03e16a54431408fd47945e16b"
     },
     "loa-add.json": {
         "hash": "33b73867bc20fcfde8b01474e09faa73"
