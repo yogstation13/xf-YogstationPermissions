@@ -1,5 +1,5 @@
 {
-    "action-access.json": {
+    "action_log-access.json": {
         "hash": "23b5dc9b1ee973fa10a76dad0e179616"
     },
     "activity-access.json": {
@@ -8,7 +8,7 @@
     "ban-add.json": {
         "hash": "3d73fd2836eecca662da6fe236b9c34c"
     },
-    "ban-edit.json": {
+    "ban-manage.json": {
         "hash": "3d73fd2836eecca662da6fe236b9c34c"
     },
     "book-delete.json": {
@@ -16,9 +16,6 @@
     },
     "book-deleted.json": {
         "hash": "546514a03e16a54431408fd47945e16b"
-    },
-    "ckey-access.json": {
-        "hash": "b6c52e49ac1716d029c0b7d1d2c3530a"
     },
     "ingame-admin.json": {
         "hash": "c730a0e26f775b0c01dec850f7fb113c"
@@ -71,16 +68,28 @@
     "loa-others.json": {
         "hash": "33b73867bc20fcfde8b01474e09faa73"
     },
-    "note-add.json": {
+    "note-access.json": {
         "hash": "ac78ab81dfd79c6cf744932e5cfd63ae"
+    },
+    "note-manage.json": {
+        "hash": "ac78ab81dfd79c6cf744932e5cfd63ae"
+    },
+    "player-access.json": {
+        "hash": "b6c52e49ac1716d029c0b7d1d2c3530a"
     },
     "round-active.json": {
         "hash": "da8ccdd36133e459fe58c8631edc944c"
     },
-    "transaction-access.json": {
+    "round-logs.json": {
+        "hash": "da8ccdd36133e459fe58c8631edc944c"
+    },
+    "transaction_log-access.json": {
         "hash": "b0f94f7fad7d7e085c59be2a45a383c0"
     },
     "watchlist-edit.json": {
         "hash": "d38386ed5d826ec1d6b27534b5156826"
+    },
+    "website-debug.json": {
+        "hash": "ad085cfd1d2064efebdb5450f56afc58"
     }
 }

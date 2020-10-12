@@ -5,7 +5,7 @@
         "version_string": "20.20.10 6",
         "hash": "6ed04bbcd7e099f844d8653965c82d1f"
     },
-    "permission.action_access.txt": {
+    "permission.action_log_access.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
@@ -23,11 +23,11 @@
         "version_string": "20.20.10 6",
         "hash": "a8e4bc87259cbb9ad973c3e5dab0b5df"
     },
-    "permission.ban_edit.txt": {
+    "permission.ban_manage.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
-        "hash": "d461294f59057762cfdcfbd24cf01a8f"
+        "hash": "e7931e8a65d21c493cd7da913475882c"
     },
     "permission.book_delete.txt": {
         "global_cache": false,
@@ -40,12 +40,6 @@
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "fe90df45a77100aed4b93deb1fa20e77"
-    },
-    "permission.ckey_access.txt": {
-        "global_cache": false,
-        "version_id": 20201006,
-        "version_string": "20.20.10 6",
-        "hash": "d013cfc8b2c3083fb8401a48d34e8060"
     },
     "permission.ingame_admin.txt": {
         "global_cache": false,
@@ -149,11 +143,23 @@
         "version_string": "20.20.10 6",
         "hash": "2009c9f84e95b3e9b92f494538ebd781"
     },
-    "permission.note_add.txt": {
+    "permission.note_access.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
-        "hash": "f018a137eb54d99d29a9b41fb6b061b5"
+        "hash": "5cffce4506d0635c97d194b75cdfffd2"
+    },
+    "permission.note_manage.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "db85135e7c4a1f7a0a03b82719a696f4"
+    },
+    "permission.player_access.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "99a88ac9d8071cebb97b362f02ff985e"
     },
     "permission.round_active.txt": {
         "global_cache": false,
@@ -161,7 +167,13 @@
         "version_string": "20.20.10 6",
         "hash": "f79e45f62567e049a593cd2313179088"
     },
-    "permission.transaction_access.txt": {
+    "permission.round_logs.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "27cd5770d3fef0b84d64acb10c2e706d"
+    },
+    "permission.transaction_log_access.txt": {
         "global_cache": false,
         "version_id": 20201006,
         "version_string": "20.20.10 6",
@@ -172,6 +184,12 @@
         "version_id": 20201006,
         "version_string": "20.20.10 6",
         "hash": "5880b3d1f8cfa586f0fdb0ce14fdc842"
+    },
+    "permission.website_debug.txt": {
+        "global_cache": false,
+        "version_id": 20201006,
+        "version_string": "20.20.10 6",
+        "hash": "2035b7eb60885b4f10ec25cfa409d91a"
     },
     "permission_interface.yogstationPermissions.txt": {
         "global_cache": false,
