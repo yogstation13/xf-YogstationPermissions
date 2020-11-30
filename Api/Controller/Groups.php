@@ -21,7 +21,7 @@ class Groups extends AbstractController
 	{
         $this->assertSuperUserKey();
 
-        $groups = $this->finder('XF:UserGroup')->order('display_style_priority')->fetch();
+        $groups = $this->finder('XF:UserGroup')->order('display_style_priority', 'DESC')->fetch();
 
         return $this->apiSuccess([
             'groups' => $groups
