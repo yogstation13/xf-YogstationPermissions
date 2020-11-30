@@ -15,8 +15,7 @@ class Groups extends AbstractController
 	 * @api-desc Get list of user groups sorted by display rank.
 	 *
 	 *
-	 * @api-out str $key the linking key generated.
-     * @api-out str $url the url the end user needs to access to link.
+	 * @api-out list $groups list of groups returned.
 	 */
     public function actionGet(ParameterBag $params)
 	{
@@ -28,5 +27,4 @@ class Groups extends AbstractController
             'groups' => $groups
 		]);
     }
-
 }
