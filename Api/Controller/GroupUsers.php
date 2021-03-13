@@ -59,9 +59,6 @@ class GroupUsers extends AbstractController
                 }
             }
             $group_obj["users"] = $new_users;
-            if (\XF::$debugMode) {
-                $group_obj["query"] = $query->getQuery();
-            }
             $response[] = $group_obj;
         }
         
