@@ -11,15 +11,11 @@ use XF\Mvc\ParameterBag;
 class GroupUsers extends AbstractController
 {
     /**
-	 * @api-desc Generates a new linking key for a external account.
+	 * @api-desc Gets users for a group
 	 *
 	 * @api-in <req> str $groups Comma delimited group id's 
-     * @api-in str $account_type Type of linked account to find, use account type "forums" for forums usernames. Defaults to "byond".
-	 * @api-in bool $skip_missing If enabled, skips accounts without a linked account otherwise use forums username instead. Defaults to true.
-     * @api-in bool $verbose Return full user object, if enabled ignores account_type parameter. Defaults to false.
+     * @api-in str $account_type optional account type, defaults to byond
 	 *
-	 * @api-out str $key the linking key generated.
-     * @api-out str $url the url the end user needs to access to link.
 	 */
 
     public function actionGet(ParameterBag $params)
@@ -27,55 +23,55 @@ class GroupUsers extends AbstractController
         $this->assertSuperUserKey();
         $this->assertApiScope('linking');
 
+        $group_ids = $this->filter('groups', 'str');
         $account_type = $this->filter('account_type', 'str');
         $account_type = empty($account_type) ? 'byond' : $account_type;
-        
-        $skip_missing = $this->filter('skip_missing', 'bool');
-        $verbose = $this->filter('verbose', 'bool');
-        
-        $finder = \XF::finder('XF:User');
-        $secondary_group_column = $finder->columnSqlName('secondary_group_ids');
-
-        $group_ids = $this->filter('groups', 'str');
 
         if (empty($group_ids)) {
             return $this->error(\XF::phrase('yg_atleast_one_group'));
         }
 
         $group_ids = explode(',', $this->filter('groups', 'str'));
+        $group_priorities = [];
+        $response = [];
 
-        $whereOr = [
-            ['user_group_id', '=', $group_ids]
-        ];
-
-        foreach ($group_ids as $group) {
-            $whereOr[] = $finder->expression('FIND_IN_SET(' . $finder->quote($group) . ', ' . $secondary_group_column . ')');
-        }
-
-        $users = $finder->whereOr($whereOr)->fetch();
-
-        if(!$verbose) {
+        foreach($group_ids as $group_id) {
+            $groupfinder = \XF::finder('XF:UserGroup');
+            $userfinder = \XF::finder('XF:User')->isValidUser();
+            
+            $group = $groupfinder->where("user_group_id", $group_id)->fetchOne();
+            if(!$group) {
+                return $this->error(\XF::phrase('yg_invalid_group'));
+            }
+            $group_obj = [
+                "user_group_id" => $group->user_group_id,
+                "name" => $group->title,
+                "priority" => $group->display_style_priority
+            ];
+        
+            $query = $userfinder->where($userfinder->expression('FIND_IN_SET(' . $userfinder->quote($group_id) . ", " . $userfinder->columnSqlName("secondary_group_ids") . ")"));
+            $users = $query->fetch();
             $new_users = [];
-
-            foreach ($users as $user) {
-                $found = false;
-
-                foreach ($user->LinkedAccounts as $linked_account) {
-                    if($linked_account->account_type == $account_type) {
-                        $new_users[] = $linked_account->account_id;
-                        $found = true;
-                    } 
-                }
-
-                if (!$found && !$skip_missing) {
-                    $new_users[] = $user->username;
+            foreach($users as $user) {
+                foreach($user->LinkedAccounts as $link) {
+                    if($link->account_type !== $account_type) continue;
+                    $new_users[] = $link->account_id;
                 }
             }
-
-            $users = $new_users;
+            $group_obj["users"] = $new_users;
+            $response[] = $group_obj;
         }
+        
+        usort($response, function ($item1, $item2) {
+            return $item2["priority"] <=> $item1["priority"];
+        });
 
-        return $this->apiSuccess(["users" => $users, "query" => $finder->getQuery()]);
+        return $this->apiSuccess([
+            "groups" => $response
+        ]);
+
+
+
     }
 
 
