@@ -49,16 +49,30 @@ class GroupUsers extends AbstractController
                 "priority" => $group->display_style_priority
             ];
         
-            $query = $userfinder->where($userfinder->expression('FIND_IN_SET(' . $userfinder->quote($group_id) . ", " . $userfinder->columnSqlName("secondary_group_ids") . ")"));
+            $query = $userfinder->whereOr(
+                [$userfinder->expression('FIND_IN_SET(' . $userfinder->quote($group_id) . ", " . $userfinder->columnSqlName("secondary_group_ids") . ")")],
+                ["user_group_id", $group_id]
+            );
             $users = $query->fetch();
             $new_users = [];
             foreach($users as $user) {
+                $username = "";
                 foreach($user->LinkedAccounts as $link) {
                     if($link->account_type !== $account_type) continue;
-                    $new_users[] = $link->account_id;
+                    $username = $link->account_id;
                 }
+                if(empty($username)) {
+                    $username = $user->Profile->custom_fields->getFieldValue('Byond');
+                }
+                if(empty($username)) {
+                    $username = $user->username;
+                }
+                $new_users[] = $username;
             }
             $group_obj["users"] = $new_users;
+            if (\XF::$debugMode) {
+                $group_obj["query"] = $query->getQuery();
+            }
             $response[] = $group_obj;
         }
         
