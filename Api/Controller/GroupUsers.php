@@ -44,7 +44,7 @@ class GroupUsers extends AbstractController
                 return $this->error(\XF::phrase('yg_invalid_group'));
             }
             $group_obj = [
-                "user_group_id" => $group_id,
+                "user_group_id" => $group->user_group_id,
                 "name" => $group->title,
                 "priority" => $group->display_style_priority
             ];
