@@ -53,10 +53,9 @@ class Linking extends AbstractController
         $user = $linked_account->User;
         $group = $group_finder->where('user_group_id', $user->display_style_group_id)->fetchOne();
 
-        $user['display_group'] = $group;
-
         return $this->apiSuccess([
             'user' => $user,
+            'display_group' => $group,
         ]);
     }
 }

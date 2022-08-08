@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <permission permission_group_id="action_log" permission_id="access" permission_type="flag" interface_group_id="yogstationPermissions" display_order="4"/>
+  <permission permission_group_id="activity" permission_id="access" permission_type="flag" interface_group_id="yogstationPermissions" display_order="3"/>
+  <permission permission_group_id="ban" permission_id="add" permission_type="flag" interface_group_id="yogstationPermissions" display_order="7"/>
+  <permission permission_group_id="ban" permission_id="manage" permission_type="flag" interface_group_id="yogstationPermissions" display_order="7"/>
+  <permission permission_group_id="book" permission_id="delete" permission_type="flag" interface_group_id="yogstationPermissions" display_order="10"/>
+  <permission permission_group_id="book" permission_id="deleted" permission_type="flag" interface_group_id="yogstationPermissions" display_order="10"/>
+  <permission permission_group_id="ingame" permission_id="admin" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="autologin" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="ban" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="build" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="debug" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="dev" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="everything" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="fun" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="poll" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="possess" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="rights" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="server" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="sound" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="spawn" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="stealth" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="ingame" permission_id="varedit" permission_type="flag" interface_group_id="yogstationPermissions" display_order="1"/>
+  <permission permission_group_id="loa" permission_id="add" permission_type="flag" interface_group_id="yogstationPermissions" display_order="9"/>
+  <permission permission_group_id="loa" permission_id="others" permission_type="flag" interface_group_id="yogstationPermissions" display_order="9"/>
+  <permission permission_group_id="note" permission_id="access" permission_type="flag" interface_group_id="yogstationPermissions" display_order="8"/>
+  <permission permission_group_id="note" permission_id="manage" permission_type="flag" interface_group_id="yogstationPermissions" display_order="8"/>
+  <permission permission_group_id="player" permission_id="access" permission_type="flag" interface_group_id="yogstationPermissions" display_order="2"/>
+  <permission permission_group_id="round" permission_id="active" permission_type="flag" interface_group_id="yogstationPermissions" display_order="6"/>
+  <permission permission_group_id="round" permission_id="logs" permission_type="flag" interface_group_id="yogstationPermissions" display_order="6"/>
+  <permission permission_group_id="transaction_log" permission_id="access" permission_type="flag" interface_group_id="yogstationPermissions" display_order="5"/>
+  <permission permission_group_id="watchlist" permission_id="edit" permission_type="flag" interface_group_id="yogstationPermissions" display_order="11"/>
+  <permission permission_group_id="website" permission_id="debug" permission_type="flag" interface_group_id="yogstationPermissions" display_order="12"/>
+</permissions>

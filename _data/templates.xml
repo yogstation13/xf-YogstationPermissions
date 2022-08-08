@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="yg_linking_success" version_id="20201006" version_string="20.20.10 6"><![CDATA[<xf:title>Account linked successfully</xf:title>
+
+<div class="blockMessage">
+	Your {$account_type|raw} account has been linked successfully.
+	<xf:if is="$account_type == 'byond'">
+		If you have a forums rank your ingame ranks should refresh next time you login.
+	<xf:elseif is="$account_type == 'discord'" />
+		If you have a forums rank your ingame ranks should refresh soon.
+	</xf:if>
+</div>]]></template>
+</templates>

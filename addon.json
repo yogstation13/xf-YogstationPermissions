@@ -1,14 +1,14 @@
 {
-    "legacy_addon_id": "",
-    "title": "Yogstation Permissions",
-    "description": "",
-    "version_id": 20210317,
-    "version_string": "20210317",
-    "dev": "",
-    "dev_url": "",
-    "faq_url": "",
-    "support_url": "",
-    "extra_urls": [],
-    "require": [],
-    "icon": ""
+  "legacy_addon_id": "",
+  "title": "Yogstation Permissions",
+  "description": "",
+  "version_id": 20220808,
+  "version_string": "20220808",
+  "dev": "",
+  "dev_url": "",
+  "faq_url": "",
+  "support_url": "",
+  "extra_urls": [],
+  "require": [],
+  "icon": ""
 }

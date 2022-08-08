@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="api_scope.linking" version_id="20201006" version_string="20.20.10 6"><![CDATA[Allow account linking functionality]]></phrase>
+  <phrase title="permission.action_log_access" version_id="20201006" version_string="20.20.10 6"><![CDATA[Access Action Logs]]></phrase>
+  <phrase title="permission.activity_access" version_id="20201006" version_string="20.20.10 6"><![CDATA[Access Activity Logs]]></phrase>
+  <phrase title="permission.ban_add" version_id="20201006" version_string="20.20.10 6"><![CDATA[Add Ban]]></phrase>
+  <phrase title="permission.ban_manage" version_id="20201006" version_string="20.20.10 6"><![CDATA[Manage Bans]]></phrase>
+  <phrase title="permission.book_delete" version_id="20201006" version_string="20.20.10 6"><![CDATA[Delete Books]]></phrase>
+  <phrase title="permission.book_deleted" version_id="20201006" version_string="20.20.10 6"><![CDATA[View Deleted Books]]></phrase>
+  <phrase title="permission.ingame_admin" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +ADMIN]]></phrase>
+  <phrase title="permission.ingame_autologin" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +AUTOLOGIN]]></phrase>
+  <phrase title="permission.ingame_ban" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +BAN]]></phrase>
+  <phrase title="permission.ingame_build" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +BUILD]]></phrase>
+  <phrase title="permission.ingame_debug" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +DEBUG]]></phrase>
+  <phrase title="permission.ingame_dev" version_id="20210317" version_string="20210317"><![CDATA[Ingame: +DEV]]></phrase>
+  <phrase title="permission.ingame_everything" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +EVERYTHING]]></phrase>
+  <phrase title="permission.ingame_fun" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +FUN]]></phrase>
+  <phrase title="permission.ingame_poll" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +POLL]]></phrase>
+  <phrase title="permission.ingame_possess" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +POSSESS]]></phrase>
+  <phrase title="permission.ingame_rights" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +RIGHTS]]></phrase>
+  <phrase title="permission.ingame_server" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +SERVER]]></phrase>
+  <phrase title="permission.ingame_sound" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +SOUND]]></phrase>
+  <phrase title="permission.ingame_spawn" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +SPAWN]]></phrase>
+  <phrase title="permission.ingame_stealth" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +STEALTH]]></phrase>
+  <phrase title="permission.ingame_varedit" version_id="20201006" version_string="20.20.10 6"><![CDATA[Ingame: +VAREDIT]]></phrase>
+  <phrase title="permission.loa_add" version_id="20201006" version_string="20.20.10 6"><![CDATA[Add LOA's]]></phrase>
+  <phrase title="permission.loa_others" version_id="20201006" version_string="20.20.10 6"><![CDATA[See All LOA's]]></phrase>
+  <phrase title="permission.note_access" version_id="20201006" version_string="20.20.10 6"><![CDATA[Access Notes]]></phrase>
+  <phrase title="permission.note_manage" version_id="20201006" version_string="20.20.10 6"><![CDATA[Manage Notes]]></phrase>
+  <phrase title="permission.player_access" version_id="20201006" version_string="20.20.10 6"><![CDATA[Lookup Players]]></phrase>
+  <phrase title="permission.round_active" version_id="20201006" version_string="20.20.10 6"><![CDATA[View Active Rounds]]></phrase>
+  <phrase title="permission.round_logs" version_id="20201006" version_string="20.20.10 6"><![CDATA[Access Round Logs]]></phrase>
+  <phrase title="permission.transaction_log_access" version_id="20201006" version_string="20.20.10 6"><![CDATA[Access Transaction Logs]]></phrase>
+  <phrase title="permission.watchlist_edit" version_id="20201006" version_string="20.20.10 6"><![CDATA[Edit Watchlists]]></phrase>
+  <phrase title="permission.website_debug" version_id="20201006" version_string="20.20.10 6"><![CDATA[Debug Webadmin]]></phrase>
+  <phrase title="permission_interface.yogstationPermissions" version_id="20201006" version_string="20.20.10 6"><![CDATA[Yogstation Permissions]]></phrase>
+  <phrase title="yg_key_not_exist" version_id="20201006" version_string="20.20.10 6"><![CDATA[This linking URL has expired, pleaes generate a new link.
+Links expire after 15 minutes.]]></phrase>
+</phrases>

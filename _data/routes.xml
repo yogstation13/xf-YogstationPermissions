@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="api" route_prefix="group" format="users" controller="YogstationPermissions:GroupUsers"/>
+  <route route_type="api" route_prefix="groups" controller="YogstationPermissions:Groups"/>
+  <route route_type="api" route_prefix="linking" format=":str&lt;account_type&gt;/:str&lt;account_id&gt;" controller="YogstationPermissions:Linking"/>
+  <route route_type="public" route_prefix="linking" controller="YogstationPermissions:Linking"/>
+</routes>
