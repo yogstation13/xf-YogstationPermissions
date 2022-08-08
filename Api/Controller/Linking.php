@@ -38,9 +38,10 @@ class Linking extends AbstractController
         $this->assertSuperUserKey();
         $this->assertApiScope('linking');
         
-        $finder = \XF::finder('YogstationPermissions:LinkedAccount');
+        $linked_account_finder = \XF::finder('YogstationPermissions:LinkedAccount');
+        $group_finder = \XF::finder('XF:UserGroup');
 
-        $linked_account = $finder->where('account_id', $params->account_id)
+        $linked_account = $linked_account_finder->where('account_id', $params->account_id)
                        ->where('account_type', $params->account_type)
                        ->with('User')->fetchOne();
 
@@ -49,8 +50,13 @@ class Linking extends AbstractController
             return $this->error(\XF::phrase('yg_no_linked_account'));
         }
 
+        $user = $linked_account->User;
+        $group = $group_finder->where('user_group_id', $user->display_style_group_id)->fetchOne();
+
+        $user['display_group'] = $group;
+
         return $this->apiSuccess([
-            'user' => $linked_account->User
+            'user' => $user,
         ]);
     }
 }
