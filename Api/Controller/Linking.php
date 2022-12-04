@@ -51,8 +51,9 @@ class Linking extends AbstractController
         }
 
         $user = $linked_account->User;
+        $joined_groups = join(",", $user->secondary_group_ids);
         $group = $group_finder
-            ->whereSql("FIND_IN_SET(group_id, $user->secondary_group_ids) AND group_id NOT IN (71, 66, 14)")
+            ->whereSql("user_group_id IN ($joined_groups) AND user_group_id NOT IN (71, 66, 14)")
             ->order('display_style_priority', 'DESC')->fetchOne();
 
         return $this->apiSuccess([
